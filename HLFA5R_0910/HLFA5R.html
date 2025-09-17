@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HLFA5R</title>
+<style>
+  :root { --w: 980px; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    line-height: 1.5;
+    color: #111;
+    background: #fff;
+  }
+  header, main, footer {
+    max-width: var(--w);
+    margin: 0 auto;
+    padding: 24px 16px;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin: 24px 0 8px;
+  }
+  p.subtitle {
+    text-align: center;
+    margin: 0 0 24px;
+    color: #555;
+  }
+  .table-wrap {
+    display: grid;
+    gap: 48px; /* nagyobb hely a két táblázat között */
+    justify-content: center;
+  }
+  section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 12px;
+    text-align: center;
+    color: #333;
+  }
+  table {
+    width: min(820px, 100%);
+    border-collapse: collapse;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  thead th {
+    text-align: left;
+    font-weight: 600;
+    padding: 12px 10px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+  }
+  tbody td {
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #eee;
+  }
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 0.95em;
+    background: #f6f6f6;
+    padding: 2px 6px;
+    border-radius: 6px;
+  }
+  footer {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    padding-bottom: 36px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Git parancsok és VS Code kiegészítők</h1>
+  <p class="subtitle">Minimalista összefoglaló – HLFA5R</p>
+</header>
+
+<main class="table-wrap">
+  <section aria-labelledby="git-table-title">
+    <h2 id="git-table-title">Git parancsok</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Git parancs</th>
+          <th>Rövid leírás</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>git init</code></td><td>Új Git repó létrehozása a mappában.</td></tr>
+        <tr><td><code>git clone &lt;url&gt;</code></td><td>Távoli repó klónozása helyi gépre.</td></tr>
+        <tr><td><code>git status</code></td><td>Változások és állapot megjelenítése.</td></tr>
+        <tr><td><code>git add &lt;fájl&gt;</code></td><td>Fájl hozzáadása a staging területhez.</td></tr>
+        <tr><td><code>git commit -m "üzenet"</code></td><td>Stagelt változások rögzítése.</td></tr>
+        <tr><td><code>git log</code></td><td>Commit előzmények listázása.</td></tr>
+        <tr><td><code>git diff</code></td><td>Különbségek megjelenítése fájlok/commitok között.</td></tr>
+        <tr><td><code>git branch</code></td><td>Branch-ek listázása/létrehozása (<code>git branch név</code>).</td></tr>
+        <tr><td><code>git switch &lt;branch&gt;</code></td><td>Átváltás másik branch-re.</td></tr>
+        <tr><td><code>git merge &lt;branch&gt;</code></td><td>Megadott branch beolvasztása az aktuálisba.</td></tr>
+        <tr><td><code>git pull</code></td><td>Távoli változások letöltése és beolvasztása.</td></tr>
+        <tr><td><code>git fetch</code></td><td>Távoli változások letöltése beolvasztás nélkül.</td></tr>
+        <tr><td><code>git push</code></td><td>Helyi commitok feltöltése a távoliba.</td></tr>
+        <tr><td><code>git stash</code></td><td>Folyamatban lévő módosítások ideiglenes elmentése.</td></tr>
+        <tr><td><code>git stash pop</code></td><td>Elrakott módosítások visszaállítása és törlése a stash-ből.</td></tr>
+        <tr><td><code>git restore &lt;fájl&gt;</code></td><td>Fájl visszaállítása az utolsó commit/INDEX állapotra.</td></tr>
+        <tr><td><code>git revert &lt;commit&gt;</code></td><td>Egy commit visszafordítása új commitban.</td></tr>
+        <tr><td><code>git reset --hard &lt;commit&gt;</code></td><td>Visszaállás korábbi állapotra (FIGYELEM: adatvesztés lehetséges).</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section aria-labelledby="ext-table-title">
+    <h2 id="ext-table-title">VS Code kiegészítők</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>VS Code Extension</th>
+          <th>Felhasználás</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>CodeLLDB</td><td>LLDB alapú hibakeresés C/C++/Rust projektekhez.</td></tr>
+        <tr><td>C/C++</td><td>Microsoft C/C++ nyelvi támogatás: IntelliSense, hibakeresés, refaktorálás.</td></tr>
+        <tr><td>C/C++ Runner</td><td>Kényelmes futtatás/build C és C++ forrásokhoz konfiguráció nélkül.</td></tr>
+        <tr><td>Code Runner</td><td>Kódrészletek gyors futtatása több nyelven beállítás nélkül.</td></tr>
+        <tr><td>Java</td><td>Java fejlesztői támogatás: nyelvi szolgáltatások, build, teszt, debug.</td></tr>
+        <tr><td>file-icons</td><td>Egyedi fájlikonok a fájlböngészőben a jobb áttekinthetőségért.</td></tr>
+        <tr><td>Live Server</td><td>Helyi fejlesztői webszerver automatikus újratöltéssel.</td></tr>
+        <tr><td>Rainbow CSV</td><td>CSV/TSV fájlok színezése, oszlopkezelés, lekérdezések.</td></tr>
+        <tr><td>Mono Debug</td><td>Mono-alapú .NET alkalmazások hibakeresése.</td></tr>
+        <tr><td>GitHub Copilot</td><td>AI-alapú kódkiegészítés és javaslatok közvetlenül szerkesztés közben.</td></tr>
+        <tr><td>GitHub Copilot Chat</td><td>Beépített AI chat kódmagyarázathoz, refaktoráláshoz, segítséghez.</td></tr>
+        <tr><td>HTML Boilerplate</td><td>Gyors HTML alap-sablonok beszúrása új oldalakhoz.</td></tr>
+        <tr><td>IntelliSense for CSS class names in HTML</td><td>CSS osztálynevek automatikus kiegészítése HTML-ben.</td></tr>
+        <tr><td>HTML Format</td><td>HTML kód automatikus formázása egységes stílusra.</td></tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+
+<footer>
+  Készítette: Baba Levente HLFA5R
+</footer>
+</body>
+</html>
