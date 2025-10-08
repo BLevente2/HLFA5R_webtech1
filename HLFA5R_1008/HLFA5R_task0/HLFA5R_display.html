@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>Display tulajdonságok – HLFA5R</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 24px; }
+h1 { font-size: 28px; margin-bottom: 16px; }
+.container { border: 1px dashed #9e9e9e; padding: 12px; }
+.XY1, .XY2, .XY3, .XY4, .XY5 { background: #e0e0e0; border: 1px solid #616161; padding: 8px; margin: 6px; }
+.XY1 { display: block; }
+.XY2 { display: inline; margin-right: 12px; }
+.XY3 { display: inline-block; width: 160px; text-align: center; }
+.XY4 { display: none; }
+.XY5 { display: block; }
+</style>
+</head>
+<body>
+<h1>CSS: display tulajdonságok (XY1…XY5)</h1>
+<div class="container">
+<div class="XY1">XY1 – block, teljes soron jelenik meg.</div>
+<div class="XY2">XY2 – inline, a soron belül folyik tovább.</div>
+<div class="XY2">XY2 – inline, egymás után helyezkedik el.</div>
+<div class="XY3">XY3 – inline-block, fix szélességgel.</div>
+<div class="XY4">XY4 – none, ez az elem rejtve marad.</div>
+<div class="XY5">XY5 – block, új sorban jelenik meg.</div>
+</div>
+</body>
+</html>
