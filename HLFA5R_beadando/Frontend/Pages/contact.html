@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kapcsolat – Méhészet</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script defer src="/assets/js/main.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="/index.html">Zümipapa Méhészet</a>
+
+            <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menü</button>
+
+            <nav id="site-nav" class="site-nav" aria-label="Főmenü">
+                <ul>
+                    <li><a href="/index.html">Kezdőlap</a></li>
+                    <li><a href="/pages/knowledge.html">A mézről</a></li>
+                    <li><a href="/pages/products.html">Terméklista</a></li>
+                    <li><a href="/pages/recipes.html">Mézes receptek</a></li>
+                    <li><a href="/pages/rhymes.html">Méhes rímek</a></li>
+                    <li><a href="/pages/gallery.html">Képek</a></li>
+                    <li><a class="active" href="/pages/contact.html">Kapcsolat</a></li>
+                    <li><a href="/pages/users.html">Felhasználók</a></li>
+                    <li class="auth">
+                        <a href="/auth/login.html">Bejelentkezés</a>
+                        <a class="btn btn-primary" href="/auth/register.html">Regisztráció</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <header class="page-header">
+            <h1>Kapcsolat</h1>
+            <p>Írj üzenetet, ha kérdésed van a mézekkel vagy a rendelésekkel kapcsolatban.</p>
+        </header>
+
+        <form class="form" autocomplete="off">
+            <div class="row">
+                <div class="field">
+                    <label for="fullName">Teljes név</label>
+                    <input id="fullName" name="fullName" type="text" placeholder="Teljes név">
+                </div>
+                <div class="field">
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" placeholder="valaki@example.com">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="field">
+                    <label for="topic">Téma</label>
+                    <input id="topic" name="topic" type="text" placeholder="Üzenet témája">
+                </div>
+                <div class="field">
+                    <label for="color">Kedvenc szín</label>
+                    <input id="color" name="color" type="color">
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="message">Üzenet</label>
+                <textarea id="message" name="message" rows="5" placeholder="Üzenet szövege"></textarea>
+            </div>
+
+            <div class="actions">
+                <button type="button" class="btn btn-primary">Küldés</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Zümipapa Méhészet</p>
+            <nav aria-label="Lábléc menü">
+                <a href="/pages/contact.html">Kapcsolat</a>
+                <a href="/pages/privacy.html">Adatvédelem</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>

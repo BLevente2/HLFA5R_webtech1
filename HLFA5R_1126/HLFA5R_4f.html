@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <title>HLFA5R_4f – 4. feladat – Számológép</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="4f.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    form {
+      width: 320px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    .form-row {
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 6px 8px;
+      box-sizing: border-box;
+    }
+
+    fieldset {
+      margin: 10px 0;
+      padding: 8px;
+    }
+
+    #btnCalc {
+      padding: 8px 16px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    #result {
+      width: 100%;
+      padding: 6px 8px;
+      box-sizing: border-box;
+    }
+
+    #errorMessage {
+      margin-top: 10px;
+      color: red;
+      min-height: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Egyszerű számológép – négy alapművelet</h1>
+
+  <form id="calcForm">
+    <div class="form-row">
+      <label for="number1">Első szám (egész):</label>
+      <input type="text" id="number1" name="number1">
+    </div>
+
+    <div class="form-row">
+      <label for="number2">Második szám (egész):</label>
+      <input type="text" id="number2" name="number2">
+    </div>
+
+    <fieldset>
+      <legend>Művelet</legend>
+      <label>
+        <input type="radio" name="operation" value="add">
+        Összeadás (+)
+      </label>
+      <label>
+        <input type="radio" name="operation" value="sub">
+        Kivonás (−)
+      </label>
+      <label>
+        <input type="radio" name="operation" value="mul">
+        Szorzás (×)
+      </label>
+      <label>
+        <input type="radio" name="operation" value="div">
+        Osztás (÷)
+      </label>
+    </fieldset>
+
+    <div class="form-row">
+      <button type="button" id="btnCalc">Számol</button>
+    </div>
+
+    <div class="form-row">
+      <label for="result">Eredmény:</label>
+      <input type="text" id="result" readonly>
+    </div>
+
+    <div id="errorMessage"></div>
+  </form>
+</body>
+</html>

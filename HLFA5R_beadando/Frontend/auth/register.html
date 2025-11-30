@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Regisztráció – Méhészet</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script defer src="/assets/js/main.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="/index.html">Zümipapa Méhészet</a>
+
+            <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menü</button>
+
+            <nav id="site-nav" class="site-nav" aria-label="Főmenü">
+                <ul>
+                    <li><a href="/index.html">Kezdőlap</a></li>
+                    <li><a href="/pages/knowledge.html">A mézről</a></li>
+                    <li><a href="/pages/products.html">Terméklista</a></li>
+                    <li><a href="/pages/recipes.html">Mézes receptek</a></li>
+                    <li><a href="/pages/rhymes.html">Méhes rímek</a></li>
+                    <li><a href="/pages/gallery.html">Képek</a></li>
+                    <li><a href="/pages/contact.html">Kapcsolat</a></li>
+                    <li><a href="/pages/users.html">Felhasználók</a></li>
+                    <li class="auth">
+                        <a href="/auth/login.html">Bejelentkezés</a>
+                        <a class="btn btn-primary active" href="/auth/register.html">Regisztráció</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <form class="form" id="register-form" autocomplete="off">
+            <h1>Regisztráció</h1>
+            <p class="muted">Töltsd ki az alábbi mezőket a fiók létrehozásához.</p>
+
+            <div class="field">
+                <label for="username">Felhasználónév</label>
+                <input id="username" name="username" type="text" placeholder="pl. zsmihaly">
+            </div>
+
+            <div class="row">
+                <div class="field">
+                    <label for="lastName">Vezetéknév</label>
+                    <input id="lastName" name="lastName" type="text" placeholder="Vezetéknév">
+                </div>
+                <div class="field">
+                    <label for="firstName">Keresztnév</label>
+                    <input id="firstName" name="firstName" type="text" placeholder="Keresztnév">
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="email">E-mail cím</label>
+                <input id="email" name="email" type="email" placeholder="pl. valaki@example.com">
+            </div>
+
+            <div class="row">
+                <div class="field password-field">
+                    <label for="password">Jelszó</label>
+                    <input id="password" name="password" type="password" placeholder="Jelszó">
+                    <button type="button" class="password-toggle" aria-label="Jelszó mutatása" data-password-toggle>
+                        <span class="password-toggle-icon" aria-hidden="true">👁</span>
+                    </button>
+                </div>
+
+                <div class="field password-field">
+                    <label for="password2">Jelszó megerősítése</label>
+                    <input id="password2" name="password2" type="password" placeholder="Jelszó megerősítése">
+                    <button type="button" class="password-toggle" aria-label="Jelszó mutatása" data-password-toggle>
+                        <span class="password-toggle-icon" aria-hidden="true">👁</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="field">
+                <p id="register-message" class="muted" aria-live="polite"></p>
+            </div>
+
+            <div class="actions">
+                <a class="btn" href="/index.html">Mégse</a>
+                <button type="submit" class="btn btn-primary">Regisztráció</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Zümipapa Méhészet</p>
+            <nav aria-label="Lábléc menü">
+                <a href="/pages/contact.html">Kapcsolat</a>
+                <a href="/pages/privacy.html">Adatvédelem</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>

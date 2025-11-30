@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HLFA5R – Rácsos elrendezés (gap)</title>
+<style>
+:root{
+  --gap: clamp(12px, 2vw, 24px);
+  --bg: #0f172a;
+  --panel: #111827;
+  --panel2: #0b1222;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --radius: 16px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100svh;
+  background:
+    radial-gradient(1200px 800px at 10% -10%, #1f2937 0%, transparent 60%),
+    radial-gradient(1000px 700px at 120% 20%, #0a0f1f 0%, transparent 55%),
+    var(--bg);
+  color:var(--text);
+  font:500 16px/1.45 Inter, ui-sans-serif, system-ui, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  letter-spacing:.2px;
+}
+.main{
+  max-width:1200px;
+  margin-inline:auto;
+  padding:calc(var(--gap)*2);
+  display:grid;
+  gap:var(--gap);
+}
+h1{
+  margin:0;
+  font-size:clamp(22px, 2.8vw, 34px);
+}
+.subtitle{
+  color:var(--muted);
+  font-size:clamp(14px, 1.4vw, 16px);
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:var(--gap);
+}
+.card{
+  border-radius:var(--radius);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0)) padding-box,
+    radial-gradient(140% 140% at -20% -20%, #1f2a44, #0b0f1a) border-box;
+  border:1px solid rgba(255,255,255,.08);
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.card .title{
+  font-size:18px;
+}
+.card .desc{
+  color:var(--muted);
+  font-size:14px;
+}
+.footer{
+  display:flex;
+  justify-content:center;
+  color:var(--muted);
+  font-size:14px;
+}
+</style>
+</head>
+<body>
+<main class="main">
+  <header>
+    <h1>Rácsos elrendezés – gap</h1>
+    <p class="subtitle">Automatikusan tördelődő kártyák, egységes hézagolással</p>
+  </header>
+
+  <section class="grid" aria-label="Kártyarács">
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 1</div>
+      <div class="desc">Reszponzív rács, min. 220px szélesség.</div>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 2</div>
+      <div class="desc">A hézagokat a gap szabály kezeli.</div>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 3</div>
+      <div class="desc">Semmilyen margin nincs a kártyák között.</div>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 4</div>
+      <div class="desc">A rács auto-fit és minmax használatával igazodik.</div>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 5</div>
+      <div class="desc">Egységes vizuális ritmus.</div>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 6</div>
+      <div class="desc">Sötét téma, letisztult tipográfia.</div>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 7</div>
+      <div class="desc">Árnyalt háttér a mélység érzetért.</div>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 8</div>
+      <div class="desc">Billentyűzettel fókuszolható elemek.</div>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 9</div>
+      <div class="desc">Rendezett elrendezés kis és nagy kijelzőn.</div>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 10</div>
+      <div class="desc">Egységes lekerekítés és keret.</div>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 11</div>
+      <div class="desc">A gap értéke clamp segítségével skálázódik.</div>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 12</div>
+      <div class="desc">Letisztult, modern megjelenés.</div>
+    </article>
+  </section>
+
+  <footer class="footer">HLFA5R • 2025</footer>
+</main>
+</body>
+</html>

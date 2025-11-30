@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSON string → JavaScript objektum</title>
+</head>
+<body>
+  <h1>JSON string → JavaScript objektum</h1>
+  <pre id="output"></pre>
+
+  <script>
+    const jsonString = '{"name":"Anna","zip":3525,"city":"Miskolc","university":"Miskolci Egyetem"}';
+    const obj = JSON.parse(jsonString);
+    const lines = [
+      'name: ' + obj.name,
+      'zip: ' + obj.zip,
+      'city: ' + obj.city,
+      'university: ' + obj.university
+    ];
+    document.getElementById('output').textContent = lines.join('\n');
+  </script>
+</body>
+</html>

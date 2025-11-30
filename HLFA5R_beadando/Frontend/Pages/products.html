@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Terméklista – Méhészet</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script defer src="/assets/js/main.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="/index.html">Zümipapa Méhészet</a>
+
+            <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menü</button>
+
+            <nav id="site-nav" class="site-nav" aria-label="Főmenü">
+                <ul>
+                    <li><a href="/index.html">Kezdőlap</a></li>
+                    <li><a href="/pages/knowledge.html">A mézről</a></li>
+                    <li><a class="active" href="/pages/products.html">Terméklista</a></li>
+                    <li><a href="/pages/recipes.html">Mézes receptek</a></li>
+                    <li><a href="/pages/rhymes.html">Méhes rímek</a></li>
+                    <li><a href="/pages/gallery.html">Képek</a></li>
+                    <li><a href="/pages/contact.html">Kapcsolat</a></li>
+                    <li><a href="/pages/users.html">Felhasználók</a></li>
+                    <li class="auth">
+                        <a href="/auth/login.html">Bejelentkezés</a>
+                        <a class="btn btn-primary" href="/auth/register.html">Regisztráció</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <header class="page-header">
+            <h1>Terméklista</h1>
+            <p>Válogatott mézfajták és egyéb méhészeti termékek.</p>
+        </header>
+
+        <section class="grid two">
+            <article class="card">
+                <h2>Akácméz</h2>
+                <p>Világos színű, lágy ízű méz mindennapi fogyasztásra.</p>
+            </article>
+
+            <article class="card">
+                <h2>Vegyes virágméz</h2>
+                <p>Illatos, karakteres méz teába, sütéshez vagy kenyérre.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Zümipapa Méhészet</p>
+            <nav aria-label="Lábléc menü">
+                <a href="/pages/contact.html">Kapcsolat</a>
+                <a href="/pages/privacy.html">Adatvédelem</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>

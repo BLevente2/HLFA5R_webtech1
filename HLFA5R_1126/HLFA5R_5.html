@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <title>HLFA5R_5 – 3. feladat</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="5.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+    }
+
+    #topButtons {
+      margin-bottom: 15px;
+    }
+
+    #topButtons button {
+      padding: 6px 12px;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+
+    #paragraphs p {
+      max-width: 600px;
+      margin-bottom: 8px;
+    }
+
+    #boxContainer {
+      position: relative;
+      margin-top: 25px;
+      height: 220px;
+      border: 1px solid #ccc;
+      padding-top: 20px;
+    }
+
+    #animBox {
+      position: absolute;
+      left: 300px;
+      top: 0;
+      width: 300px;
+      height: 80px;
+      background-color: #ffcc66;
+      border: 1px solid #aa8844;
+      font-size: 12pt;
+      font-weight: bold;
+      text-align: center;
+      line-height: 80px;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>jQuery gyakorlás – 3. feladat</h1>
+
+  <div id="topButtons">
+    <button id="btnStartAnimation">Animáció indítása</button>
+    <button id="btnHideParagraphs">Bekezdések elrejtése</button>
+    <button id="btnToggleBox">Összecsuk / Kinyit</button>
+  </div>
+
+  <div id="paragraphs">
+    <p>Első bekezdés szövege. A gombok a bekezdések felett különböző műveleteket végeznek a dobozzal és a bekezdésekkel.</p>
+    <p>Második bekezdés szövege. Az animáció indítása gomb egy téglalap alakú pályán mozgatja a dobozt.</p>
+    <p>Harmadik bekezdés szövege. A Bekezdések elrejtése gomb elrejti ezeket a bekezdéseket, a doboz pedig a helyükre kerül.</p>
+  </div>
+
+  <div id="boxContainer">
+    <div id="animBox">ME GEIK – PTI</div>
+  </div>
+</body>
+</html>

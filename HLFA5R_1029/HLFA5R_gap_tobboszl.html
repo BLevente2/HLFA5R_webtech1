@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HLFA5R – Többoszlopos elrendezés (column-gap)</title>
+<style>
+:root{
+  --gap: clamp(12px, 2vw, 24px);
+  --colgap: 24px;
+  --bg: #0f172a;
+  --ink: #e5e7eb;
+  --muted: #94a3b8;
+  --radius: 16px;
+  --cardpad: 16px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100svh;
+  background:
+    radial-gradient(1200px 800px at 10% -10%, #1f2937 0%, transparent 60%),
+    radial-gradient(1000px 700px at 120% 20%, #0a0f1f 0%, transparent 55%),
+    var(--bg);
+  color:var(--ink);
+  font:500 16px/1.45 Inter, ui-sans-serif, system-ui, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  letter-spacing:.2px;
+}
+.wrapper{
+  max-width:1200px;
+  margin-inline:auto;
+  padding:calc(var(--gap)*2);
+  display:grid;
+  gap:var(--gap);
+}
+h1{
+  margin:0;
+  font-size:clamp(22px, 2.8vw, 34px);
+}
+.subtitle{
+  color:var(--muted);
+  font-size:clamp(14px, 1.4vw, 16px);
+}
+.controls{
+  display:flex;
+  gap:var(--gap);
+  align-items:center;
+  flex-wrap:wrap;
+}
+.controls input[type="range"]{ width:min(420px, 60vw); }
+.multicol{
+  column-width: 260px;
+  column-gap: var(--colgap);
+}
+.card{
+  display:inline-block;
+  width:100%;
+  break-inside: avoid;
+  border-radius:var(--radius);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0)) padding-box,
+    radial-gradient(140% 140% at -20% -20%, #1f2a44, #0b0f1a) border-box;
+  border:1px solid rgba(255,255,255,.08);
+  margin: 0 0 var(--gap);
+  padding: var(--cardpad);
+}
+.card .title{font-size:18px; margin:0 0 6px}
+.card .desc{color:var(--muted); font-size:14px; margin:0}
+.footer{
+  display:flex;
+  justify-content:center;
+  color:var(--muted);
+  font-size:14px;
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const range = document.querySelector("#colGapRange");
+  const out = document.querySelector("#colGapValue");
+  const root = document.documentElement;
+  const update = v => {
+    out.textContent = v + "px";
+    root.style.setProperty("--colgap", v + "px");
+  };
+  update(range.value);
+  range.addEventListener("input", e => update(e.target.value));
+});
+</script>
+</head>
+<body>
+<main class="wrapper">
+  <header>
+    <h1>Többoszlopos elrendezés – column-gap</h1>
+    <p class="subtitle">Áramló kártyák több oszlopba tördelve, egységes oszlophézaggal</p>
+  </header>
+
+  <section class="controls" aria-label="Oszlophézag beállítása">
+    <label for="colGapRange">Oszlophézag:</label>
+    <input id="colGapRange" type="range" min="8" max="48" step="1" value="24" />
+    <span id="colGapValue"></span>
+  </section>
+
+  <section class="multicol" aria-label="Többoszlopos lista">
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 1</div>
+      <p class="desc">Többoszlopos elrendezés column-width és column-gap használatával.</p>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 2</div>
+      <p class="desc">A kártyák nem törnek szét, break-inside: avoid.</p>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 3</div>
+      <p class="desc">Az oszlophézag a csúszkával állítható.</p>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 4</div>
+      <p class="desc">Reszponzív: a column-width alapján változik az oszlopszám.</p>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 5</div>
+      <p class="desc">Letisztult kártyastílus egységes tipográfiával.</p>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 6</div>
+      <p class="desc">Az elemek között nincs margin vízszintesen, azt a column-gap adja.</p>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 7</div>
+      <p class="desc">A kártyák függőleges távolságát a margin-bottom adja.</p>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 8</div>
+      <p class="desc">Billentyűzettel fókuszolható elemek.</p>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 9</div>
+      <p class="desc">Áramló (masonry-szerű) elrendezés több oszlopban.</p>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 10</div>
+      <p class="desc">Stabil többoszlopos tördelés bármely képernyőn.</p>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 11</div>
+      <p class="desc">Modern, kontrasztos, sötét téma.</p>
+    </article>
+    <article class="card" tabindex="0">
+      <div class="title">Kártya 12</div>
+      <p class="desc">Egységes keret és lekerekítés.</p>
+    </article>
+  </section>
+
+  <footer class="footer">HLFA5R • 2025</footer>
+</main>
+</body>
+</html>

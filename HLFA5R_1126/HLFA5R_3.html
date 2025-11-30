@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <title>NEPTUNKOD_3 – 1. feladat</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="3.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      cursor: default;
+    }
+
+    p {
+      max-width: 600px;
+    }
+
+    form {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      width: 320px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 6px 8px;
+      margin-bottom: 10px;
+      border: 2px solid #888;
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    #btnSubmit {
+      padding: 8px 16px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="pageHeader">jQuery gyakorlás – 1. feladat</h1>
+
+  <p id="para1">
+    Ez az első bekezdés szövege. A következő szövegre kattintva el tudod rejteni ezt a bekezdést:
+    <a href="#" id="linkHideP1">Kattints ide</a>.
+  </p>
+
+  <p id="para2">
+    Ez a második bekezdés szövege. A következő szöveg duplán kattintva elrejti ezt a bekezdést:
+    <a href="#" id="linkHideP2">Kattints ide</a>.
+  </p>
+
+  <form id="applyForm">
+    <h2>Jelentkezési űrlap</h2>
+
+    <label for="nameInput">Név:</label>
+    <input type="text" id="nameInput" class="input-field" placeholder="Add meg a neved">
+
+    <label for="emailInput">E-mail cím:</label>
+    <input type="email" id="emailInput" class="input-field" placeholder="Add meg az e-mail címed">
+
+    <label for="subjectInput">Tárgy:</label>
+    <input type="text" id="subjectInput" class="input-field" placeholder="Add meg a tárgyat">
+
+    <button type="button" id="btnSubmit">Jelentkezés</button>
+  </form>
+</body>
+</html>

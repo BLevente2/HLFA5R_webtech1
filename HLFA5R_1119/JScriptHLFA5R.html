@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <title>JScriptHLFA5R.html</title>
+</head>
+<body>
+  <h1>Órarend betöltése JSON-ból</h1>
+
+  <button id="loadBtn">Órarend betöltése</button>
+
+  <pre id="output"></pre>
+
+  <script>
+    const button = document.getElementById("loadBtn");
+    const output = document.getElementById("output");
+
+    button.addEventListener("click", function () {
+      fetch("orarendHLFA5R.json")
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (data) {
+          let text = "";
+          text += data.neptun + " Órarend " + data.ev + "\n\n";
+
+          for (let i = 0; i < data.orarend.length; i++) {
+            const ora = data.orarend[i];
+            text += "Nap: " + ora.nap + "\n";
+            text += "Óra sorszáma: " + ora.ora_sorszama + "\n";
+            text += "Idősáv: " + ora.idosav + "\n";
+            text += "Tárgy: " + ora.targy + "\n";
+            text += "Helyszín: " + ora.helyszin + "\n";
+            text += "\n";
+          }
+
+          output.textContent = text;
+        })
+        .catch(function (error) {
+          output.textContent = "Hiba történt a JSON betöltése közben.";
+        });
+    });
+  </script>
+</body>
+</html>

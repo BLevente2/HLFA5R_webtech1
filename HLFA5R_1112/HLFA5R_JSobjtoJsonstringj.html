@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JS objektum → JSON string</title>
+</head>
+<body>
+  <h1>JS objektum → JSON string</h1>
+  <pre id="output"></pre>
+
+  <script>
+    const data = {
+      name: 'Anna',
+      zip: 3525,
+      city: 'Miskolc',
+      university: 'Miskolci Egyetem'
+    };
+    const json = JSON.stringify(data, null, 2);
+    document.getElementById('output').textContent = json;
+  </script>
+</body>
+</html>

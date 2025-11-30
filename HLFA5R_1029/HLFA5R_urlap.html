@@ -1,0 +1,86 @@
+<!doctype html>
+}
+input:focus { outline: none; border-color: #6366f1; box-shadow: 0 0 0 4px rgba(99,102,241,.15); }
+.range-row { display: grid; gap: .5rem; align-items: center; }
+.range-row input[type="range"] { width: 100%; }
+
+
+.controls { width: min(100%, var(--maxw)); margin: .75rem auto 0; display: flex; gap: .75rem; justify-content: flex-end; }
+.btn { appearance: none; border: 0; padding: .7rem 1rem; border-radius: 10px; cursor: pointer; }
+.btn.primary { background: #4f46e5; color: #fff; }
+.btn.ghost { background: #e5e7eb; }
+
+
+footer { margin-top: 1rem; color: #334155; }
+footer ul { margin: .5rem 0 0; padding-left: 1rem; display: grid; gap: .25rem; }
+footer a { color: #1d4ed8; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<header>
+<h1>HLFA5R – HTML5 űrlap</h1>
+</header>
+
+
+<section>
+<form id="mainForm" action="feldolgozo.php" method="post" autocomplete="off">
+<div class="field">
+<label for="full_name">Név</label>
+<input id="full_name" name="full_name" type="text" placeholder="Írd be a neved" autofocus required pattern="^[A-Za-zÁÉÍÓÖŐÚÜŰáéíóöőúüű]+(?:[ -][A-Za-zÁÉÍÓÖŐÚÜŰáéíóöőúüű]+)*$" title="Csak betűk, szóköz és kötőjel.">
+</div>
+
+
+<div class="field">
+<label for="pin">Pin kód</label>
+<input id="pin" name="pin" type="password" inputmode="numeric" pattern="^[0-9]{4}$" maxlength="4" required title="4 számjegy">
+</div>
+
+
+<div class="field">
+<label for="fruit">Kedvenc gyümölcs</label>
+<input id="fruit" name="fruit" type="text" list="fruits" placeholder="pl. alma" required>
+<datalist id="fruits">
+<option value="alma" label="alma — 250 Ft/kg"></option>
+<option value="körte" label="körte — 420 Ft/kg"></option>
+<option value="banán" label="banán — 780 Ft/kg"></option>
+</datalist>
+</div>
+
+
+<div class="field">
+<label for="age">Életkor (1–100)</label>
+<input id="age" name="age" type="number" min="1" max="100" step="1" required>
+</div>
+
+
+<div class="field">
+<label for="shoe_size">Lábméret (25–50, 0.5 lépés)</label>
+<input id="shoe_size" name="shoe_size" type="number" min="25" max="50" step="0.5" required>
+</div>
+
+
+<div class="field range-row">
+<label for="confidence">Önbizalom (0–100)</label>
+<input id="confidence" name="confidence" type="range" min="0" max="100" value="50">
+</div>
+</form>
+</section>
+
+
+<div class="controls">
+<button class="btn ghost" type="submit" form="mainForm" formnovalidate formaction="feldolgozo1.php">Elküld ellenőrzés nélkül</button>
+<button class="btn primary" type="submit" form="mainForm">Elküld</button>
+</div>
+
+
+<footer>
+<div>Források:</div>
+<ul>
+<li><a href="http://html5doctor.com/html5-forms-introduction-and-new-attributes" target="_blank" rel="noopener">HTML5 Doctor – Forms</a></li>
+<li><a href="https://www.html5pattern.com" target="_blank" rel="noopener">HTML5 Pattern</a></li>
+<li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
+</ul>
+</footer>
+</body>
+</html>

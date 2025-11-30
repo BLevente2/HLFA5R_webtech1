@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kezdőlap – Méhészet</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script defer src="assets/js/main.js"></script>
+
+    <style>
+        .tagline {
+            letter-spacing: .2px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="/index.html" aria-label="Kezdőlap">Zümipapa Méhészet</a>
+
+            <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menü</button>
+
+            <nav id="site-nav" class="site-nav" aria-label="Főmenü">
+                <ul>
+                    <li><a class="active" href="/index.html">Kezdőlap</a></li>
+                    <li><a href="/pages/knowledge.html">A mézről</a></li>
+                    <li><a href="/pages/products.html">Terméklista</a></li>
+                    <li><a href="/pages/recipes.html">Mézes receptek</a></li>
+                    <li><a href="/pages/rhymes.html">Méhes rímek</a></li>
+                    <li><a href="/pages/gallery.html">Képek</a></li>
+                    <li><a href="/pages/contact.html">Kapcsolat</a></li>
+                    <li><a href="/pages/users.html">Felhasználók</a></li>
+                    <li class="auth">
+                        <a href="/auth/login.html">Bejelentkezés</a>
+                        <a class="btn btn-primary" href="/auth/register.html">Regisztráció</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero hero-layout">
+            <div class="hero-text">
+                <div class="hero-kicker">
+                    <img src="assets/images/flag-hu.gif" alt="Magyar zászló" class="hero-flag">
+                    <span>Családi kézműves méhészet</span>
+                </div>
+
+                <h1>Üdvözöljük a Zümipapa Méhészet honlapján!</h1>
+
+                <p class="tagline">
+                    A mézfogyasztás sohase legyen terhes kötelesség, legyen inkább az öröm egyik forrása, a folyamatos egészség alapja!
+                </p>
+
+                <div class="hero-actions">
+                    <a class="btn btn-secondary" href="/pages/products.html">Termékeink megtekintése</a>
+                    <a class="btn btn-outline" href="/pages/contact.html">Kapcsolatfelvétel</a>
+                </div>
+
+                <ul class="hero-list">
+                    <li>Saját termelésű, adalékanyagmentes mézek.</li>
+                    <li>Akác-, vegyesvirág- és különleges mézfajták.</li>
+                    <li>Rendelés telefonon vagy e-mailben, rugalmas átvétellel.</li>
+                </ul>
+            </div>
+
+            <div class="hero-media">
+                <div class="hero-media-bg">
+                    <img src="assets/images/header-honey.jpg" alt="" loading="lazy">
+                </div>
+                <figure class="hero-figure">
+                    <img src="assets/images/beekeeper.jpg" alt="Méhész a méhek között" loading="lazy">
+                    <figcaption>„A méz minden cseppje gondos munka eredménye.”</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="grid three home-sections">
+            <article class="card">
+                <h2>Amit a mézről tudni kell</h2>
+                <p>Ismerd meg a méz fajtáit, jótékony hatásait és felhasználási módjait.</p>
+                <a class="link" href="/pages/knowledge.html">Tovább az ismertetőre</a>
+            </article>
+
+            <article class="card">
+                <h2>Termékeink</h2>
+                <p>Akác-, vegyesvirág-, napraforgó- és egyéb mézek, ajándékcsomagokkal kiegészítve.</p>
+                <a class="link" href="/pages/products.html">Teljes terméklista</a>
+            </article>
+
+            <article class="card">
+                <h2>Receptek és ötletek</h2>
+                <p>Ötletek mézes süteményekhez, italokhoz és egészséges reggelikhez.</p>
+                <a class="link" href="/pages/recipes.html">Mézes receptek</a>
+            </article>
+        </section>
+
+        <section class="home-news">
+            <div class="home-news-header">
+                <div class="home-news-title">
+                    <img src="assets/images/bee-logo.gif" alt="" class="home-news-icon" loading="lazy">
+                    <h2>Hírek és akciók</h2>
+                </div>
+                <a class="btn small" href="/pages/products.html#akciok">Aktuális akcióink</a>
+            </div>
+
+            <div class="home-news-grid">
+                <article class="news-item">
+                    <h3>Friss akácméz érkezett</h3>
+                    <p>Korlátozott mennyiségben elérhető az idei, világos színű akácméz.</p>
+                </article>
+
+                <article class="news-item">
+                    <h3>Kóstoló szombaton</h3>
+                    <p>Szombaton 10:00–12:00 között ingyenes mézkóstolóval várjuk az érdeklődőket.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Zümipapa Méhészet</p>
+            <nav aria-label="Lábléc menü">
+                <a href="/pages/contact.html">Kapcsolat</a>
+                <a href="/pages/privacy.html">Adatvédelem</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>

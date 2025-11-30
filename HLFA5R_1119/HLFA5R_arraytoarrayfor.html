@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <title>NEPTUNKOD_arraytoarrayfor.html</title>
+</head>
+<body>
+  <h1>JSON tömb–tömb kiírása listába</h1>
+
+  <ul id="output"></ul>
+
+  <script>
+    const BL = {
+      data: [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+      ]
+    };
+
+    const list = document.getElementById("output");
+
+    for (let i = 0; i < BL.data.length; i++) {
+      for (let j = 0; j < BL.data[i].length; j++) {
+        const li = document.createElement("li");
+        li.textContent = BL.data[i][j];
+        list.appendChild(li);
+      }
+    }
+  </script>
+</body>
+</html>

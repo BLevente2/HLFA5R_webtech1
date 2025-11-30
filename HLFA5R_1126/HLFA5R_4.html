@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <title>NEPTUNKOD_4 – 2. feladat</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="4.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      max-width: 650px;
+    }
+
+    #paragraphButtons,
+    #opacityButtons,
+    #formVisibilityButtons {
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 6px 12px;
+      margin-right: 6px;
+      margin-bottom: 6px;
+      border: 1px solid #444;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    #applyForm {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #aaa;
+      width: 340px;
+      background-color: #f5f7ff;
+    }
+
+    #applyForm h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 6px 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    #btnSubmit {
+      padding: 7px 14px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="pageHeader">jQuery gyakorlás – 2. feladat</h1>
+
+  <div id="paragraphSection">
+    <p class="infoParagraph" id="p1">
+      Ez az első bekezdés szövege. A lenti gombokkal elrejthetjük, megjeleníthetjük vagy kapcsolgathatjuk a bekezdéseket.
+    </p>
+    <p class="infoParagraph" id="p2">
+      Ez a második bekezdés szövege. A három gomb egyszerre mindhárom bekezdésre vonatkozik.
+    </p>
+    <p class="infoParagraph" id="p3">
+      Ez a harmadik bekezdés szövege. Az Elrejt, Megjelenít, Elrejt/Megjelenít gombok mindig a három bekezdést kezelik.
+    </p>
+  </div>
+
+  <div id="paragraphButtons">
+    <button id="btnHideParas">Elrejt</button>
+    <button id="btnShowParas">Megjelenít</button>
+    <button id="btnToggleParas">Elrejt/Megjelenít</button>
+  </div>
+
+  <form id="applyForm">
+    <h2>Jelentkezési űrlap</h2>
+
+    <label for="titleInput">Cím:</label>
+    <input type="text" id="titleInput" class="input-field" placeholder="Add meg a címet">
+
+    <label for="nameInput">Név:</label>
+    <input type="text" id="nameInput" class="input-field" placeholder="Add meg a neved">
+
+    <label for="emailInput">E-mail cím:</label>
+    <input type="email" id="emailInput" class="input-field" placeholder="Add meg az e-mail címed">
+
+    <button type="button" id="btnSubmit">Jelentkezés</button>
+  </form>
+
+  <div id="opacityButtons">
+    <button id="btnOpacity01">Áttetszőség = 0.1</button>
+    <button id="btnOpacity05">Áttetszőség = 0.5</button>
+    <button id="btnOpacity08">Áttetszőség = 0.8</button>
+  </div>
+
+  <div id="formVisibilityButtons">
+    <button id="btnHideForm">Elrejt</button>
+    <button id="btnShowForm">Megjelenít</button>
+    <button id="btnToggleForm">Elrejt/Megjelenít</button>
+  </div>
+</body>
+</html>

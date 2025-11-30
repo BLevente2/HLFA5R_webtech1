@@ -1,0 +1,62 @@
+{
+  "neptun": "HLFA5R",
+  "ev": 2025,
+  "orarend": [
+    {
+      "nap": "Hétfő",
+      "ora_sorszama": "1",
+      "idosav": "8:00-9:00",
+      "targy": "Szoftvertesztelés",
+      "helyszin": "A/2 Fsz."
+    },
+    {
+      "nap": "Hétfő",
+      "ora_sorszama": "3",
+      "idosav": "10:00-11:00",
+      "targy": "Webtechnológiák 1.",
+      "helyszin": "A1/MFsz. 5. Ea."
+    },
+    {
+      "nap": "Kedd",
+      "ora_sorszama": "3",
+      "idosav": "10:00-11:00",
+      "targy": "Mesterséges intelligencia alapok",
+      "helyszin": "A1/MFsz. 32. Ea."
+    },
+    {
+      "nap": "Csütörtök",
+      "ora_sorszama": "3",
+      "idosav": "10:00-11:00",
+      "targy": "Szoftvertesztelés",
+      "helyszin": "Inf. 103"
+    },
+    {
+      "nap": "Hétfő",
+      "ora_sorszama": "5",
+      "idosav": "12:00-13:00",
+      "targy": "Angol szaknyelv",
+      "helyszin": "A1/223"
+    },
+    {
+      "nap": "Szerda",
+      "ora_sorszama": "5",
+      "idosav": "12:00-13:00",
+      "targy": "Webtechnológiák 1.",
+      "helyszin": "Inf. 101"
+    },
+    {
+      "nap": "Kedd",
+      "ora_sorszama": "7",
+      "idosav": "14:00-15:00",
+      "targy": "Algoritmusok és viszgálatuk",
+      "helyszin": "A1/305-6. 30. Ea."
+    },
+    {
+      "nap": "Szerda",
+      "ora_sorszama": "7",
+      "idosav": "14:00-15:00",
+      "targy": "Vállalati rendszerek fejlesztése",
+      "helyszin": "Inf. 103"
+    }
+  ]
+}

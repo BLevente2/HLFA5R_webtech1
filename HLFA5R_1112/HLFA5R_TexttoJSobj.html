@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSON Text konvertálása JavaScript objektummá!</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; line-height: 1.5; padding: 24px; }
+    h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    pre { background: #f3f4f6; padding: 12px; border-radius: 8px; overflow: auto; }
+    ul { margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <h1>JSON Text konvertálása JavaScript objektummá!</h1>
+  <p>Eredeti JSON szöveg:</p>
+  <pre id="jsonText"></pre>
+  <p>Konvertált objektum adatai:</p>
+  <ul id="eredmeny"></ul>
+
+  <script>
+    const jsonText = '{"nev":"Baba Levente","iranyitoszam":3529,"varos":"Miskolc","egyetem":"Miskolci Egyetem"}';
+    document.getElementById('jsonText').textContent = jsonText;
+
+    const adatok = JSON.parse(jsonText);
+    const lista = document.getElementById('eredmeny');
+
+    function letrehozListaElem(cimke, ertek) {
+      const elem = document.createElement('li');
+      elem.textContent = cimke + ': ' + ertek;
+      return elem;
+    }
+
+    lista.appendChild(letrehozListaElem('Név', adatok.nev));
+    lista.appendChild(letrehozListaElem('Irányítószám', adatok.iranyitoszam));
+    lista.appendChild(letrehozListaElem('Város', adatok.varos));
+    lista.appendChild(letrehozListaElem('Egyetem', adatok.egyetem));
+  </script>
+</body>
+</html>

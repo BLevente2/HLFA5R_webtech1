@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Képek – Méhészet</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script defer src="/assets/js/main.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="/index.html">Zümipapa Méhészet</a>
+
+            <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menü</button>
+
+            <nav id="site-nav" class="site-nav" aria-label="Főmenü">
+                <ul>
+                    <li><a href="/index.html">Kezdőlap</a></li>
+                    <li><a href="/pages/knowledge.html">A mézről</a></li>
+                    <li><a href="/pages/products.html">Terméklista</a></li>
+                    <li><a href="/pages/recipes.html">Mézes receptek</a></li>
+                    <li><a href="/pages/rhymes.html">Méhes rímek</a></li>
+                    <li><a class="active" href="/pages/gallery.html">Képek</a></li>
+                    <li><a href="/pages/contact.html">Kapcsolat</a></li>
+                    <li><a href="/pages/users.html">Felhasználók</a></li>
+                    <li class="auth">
+                        <a href="/auth/login.html">Bejelentkezés</a>
+                        <a class="btn btn-primary" href="/auth/register.html">Regisztráció</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <header class="page-header">
+            <h1>Képek</h1>
+            <p>Pillanatképek a méhészet mindennapjaiból.</p>
+        </header>
+
+        <section class="card video-section">
+            <h2>Bemutatkozó videó</h2>
+            <p>Rövid videó a méhészet mindennapjairól.</p>
+
+            <div class="video-player" data-video-player="gallery">
+                <video src="/assets/videos/video1.mp4" preload="metadata" playsinline></video>
+
+                <div class="video-controls">
+                    <button type="button" class="btn small" data-video-control="play-pause">Lejátszás</button>
+                    <button type="button" class="btn small" data-video-control="backward">« 10 mp</button>
+                    <button type="button" class="btn small" data-video-control="forward">10 mp »</button>
+                    <button type="button" class="btn small" data-video-control="mute">Némítás</button>
+
+                    <label class="video-volume">
+                        Hangerő:
+                        <input
+                            type="range"
+                            min="0"
+                            max="1"
+                            step="0.05"
+                            value="1"
+                            data-video-control="volume"
+                        >
+                    </label>
+
+                    <span class="video-time" data-video-time>0:00 / 0:00</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid two">
+            <article class="card">
+                <h2>Méhcsaládok</h2>
+                <p>Ide kerülnek a kaptárakról, méhekről készült fotók.</p>
+            </article>
+
+            <article class="card">
+                <h2>Termékek</h2>
+                <p>Fotók az üveges mézekről, ajándékcsomagokról és kóstolókról.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Zümipapa Méhészet</p>
+            <nav aria-label="Lábléc menü">
+                <a href="/pages/contact.html">Kapcsolat</a>
+                <a href="/pages/privacy.html">Adatvédelem</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
