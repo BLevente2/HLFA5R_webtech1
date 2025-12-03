@@ -1,0 +1,60 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build / dist
+dist/
+build/
+out/
+.tmp/
+.temp/
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# TypeScript
+*.tsbuildinfo
+
+# Package manager cache
+.npm/
+.yarn/
+.pnpm-store/
+
+# Next.js / Nuxt / other frameworks (ha nem kell, töröld)
+.next/
+.nuxt/
+.svelte-kit/
+.cache/
+.storybook/
+
+# Logs & misc
+*.log.*
