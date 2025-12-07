@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>Webtechnológiák 1 – jQuery UI feladatok</title>
+
+    <link rel="stylesheet" href="HLFA5R_style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <style>
+        .task-section {
+            margin-top: 24px;
+        }
+        
+        #move-box-container {
+            margin-top: 16px;
+            padding: 20px;
+            border: 1px solid #cccccc;
+            height: 180px;
+            position: relative;
+        }
+        
+        #move-box {
+            width: 220px;
+            padding: 16px;
+            background-color: #e6f0ff;
+            border: 1px solid #004c99;
+            text-align: center;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: move;
+            font-weight: 600;
+        }
+        
+        #task2 {
+            margin-top: 32px;
+        }
+        
+        #calc-form {
+            margin-top: 12px;
+            max-width: 420px;
+        }
+        
+        #calc-form label {
+            display: block;
+            margin-top: 8px;
+        }
+        
+        #slider-b {
+            width: 260px;
+            margin: 8px 0;
+        }
+        
+        #slider-b-value {
+            display: inline-block;
+            width: 40px;
+            text-align: center;
+        }
+        
+        #result-dialog {
+            display: none;
+        }
+        
+        fieldset#operation-group {
+            margin-top: 12px;
+            padding: 8px 12px;
+        }
+        
+        fieldset#operation-group label {
+            display: inline-block;
+            margin-right: 12px;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script defer src="HLFA5Rui_7.js"></script>
+</head>
+
+<body>
+    <header class="page-header">
+        <h1>jQuery UI – két feladat</h1>
+        <p>Baba Levente – Neptun: HLFA5R</p>
+    </header>
+
+    <main>
+        <section id="task1" class="task-section">
+            <h2>1. feladat – doboz mozgatása és effektusok</h2>
+            <p>A doboz jQuery UI segítségével mozgatható, átméretezhető és effektusokkal animálható.</p>
+
+            <div id="move-box-container">
+                <div id="move-box">ME GEIK – PTI</div>
+            </div>
+
+            <p style="margin-top: 16px;">
+                <button id="start-effect">Effektus indítása</button>
+                <button id="toggle-box">Doboz elrejtése / megjelenítése</button>
+            </p>
+        </section>
+
+        <section id="task2" class="task-section">
+            <h2>2. feladat – jQuery UI alapú számológép</h2>
+            <p>Az első számot egy jQuery UI spinnerrel, a másodikat egy sliderrel adhatod meg. Az eredmény egy jQuery UI párbeszédablakban jelenik meg.</p>
+
+            <form id="calc-form">
+                <label for="spinner-a">Első szám:</label>
+                <input id="spinner-a" name="a">
+
+                <label for="slider-b">Második szám:</label>
+                <div id="slider-b"></div>
+                <span id="slider-b-value"></span>
+
+                <fieldset id="operation-group">
+                    <legend>Művelet</legend>
+                    <label>
+                        <input type="radio" name="op" value="add" checked> Összeadás
+                    </label>
+                    <label>
+                        <input type="radio" name="op" value="sub"> Kivonás
+                    </label>
+                    <label>
+                        <input type="radio" name="op" value="mul"> Szorzás
+                    </label>
+                    <label>
+                        <input type="radio" name="op" value="div"> Osztás
+                    </label>
+                </fieldset>
+
+                <p style="margin-top: 12px;">
+                    <button type="submit" id="calc-button">Számolás</button>
+                </p>
+            </form>
+
+            <div id="result-dialog" title="Eredmény"></div>
+        </section>
+    </main>
+</body>
+
+</html>

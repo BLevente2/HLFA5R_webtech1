@@ -1,0 +1,21 @@
+{
+    "hallgato": {
+        "nev": "Baba Levente",
+        "neptun": "HLFA5R"
+    },
+    "orarend": [{
+            "kurzus": "Webtechnológiák 1.",
+            "nap": "Hétfő",
+            "idopont": "10:00–12:00",
+            "cim": "Miskolci Egyetem, 3515 Miskolc-Egyetemváros",
+            "telefonszam": "+36 46 565 111"
+        },
+        {
+            "kurzus": "Webtechnológiák 1.",
+            "nap": "Szerda",
+            "idopont": "12:00–14:00",
+            "cim": "Miskolci Egyetem, 3515 Miskolc-Egyetemváros",
+            "telefonszam": "+36 46 565 111"
+        }
+    ]
+}

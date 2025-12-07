@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>Webtechnológiák 1 – 3. feladat (jQuery animáció)</title>
+    <link rel="stylesheet" href="HLFA5R_style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script defer src="HLFA5R_3.js"></script>
+
+    <style>
+        .content-section {
+            margin-top: 20px;
+        }
+        
+        .button-row {
+            margin-bottom: 16px;
+        }
+        
+        .button-row button {
+            margin-right: 8px;
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: 1px solid #004c99;
+            background-color: #0066cc;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+        
+        .button-row button:hover {
+            background-color: #004c99;
+        }
+        
+        .text-block p {
+            margin: 0 0 8px 0;
+        }
+        
+        .box-wrapper {
+            margin-top: 20px;
+            height: 180px;
+            position: relative;
+        }
+        
+        #anim-box {
+            position: relative;
+            left: 300px;
+            top: 0;
+            width: 300px;
+            height: 80px;
+            padding: 16px;
+            background-color: #e6f0ff;
+            border: 2px solid #004c99;
+            color: #004c99;
+            font-weight: 600;
+            font-size: 12pt;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="page-header">
+        <h1>Webtechnológiák 1 – 3. feladat</h1>
+        <p>Baba Levente – Neptun: HLFA5R</p>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <div class="button-row">
+                <button type="button" id="animate-button">Animáció indítása</button>
+                <button type="button" id="hide-paragraphs-button">Bekezdés elrejtése</button>
+                <button type="button" id="toggle-box-button">Összecsuk / Kinyit</button>
+            </div>
+
+            <div id="paragraphs" class="text-block">
+                <p class="text-paragraph">Ez az első bekezdés. A jQuery metódusok működését szemlélteti.</p>
+                <p class="text-paragraph">Ez a második bekezdés. A gombok különböző műveleteket indítanak.</p>
+                <p class="text-paragraph">Ez a harmadik bekezdés. A doboz az alábbi területen jelenik meg.</p>
+            </div>
+
+            <div class="box-wrapper">
+                <div id="anim-box">ME GEIK – PTI</div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

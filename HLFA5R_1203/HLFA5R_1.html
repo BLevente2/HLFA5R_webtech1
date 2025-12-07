@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>Webtechnológiák 1 – Órarend</title>
+    <link rel="stylesheet" href="HLFA5R_style.css">
+    <script defer src="HLFA5R_1.js"></script>
+</head>
+
+<body>
+    <header class="page-header">
+        <h1>Webtechnológiák 1 – órarend</h1>
+        <p id="student-info"></p>
+    </header>
+
+    <main>
+        <button id="load-button">Adatok betöltése</button>
+
+        <section id="schedule-section" class="hidden">
+            <h2>2025 őszi félév – órarend</h2>
+
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Kurzus</th>
+                        <th>Nap</th>
+                        <th>Időpont</th>
+                        <th>Cím</th>
+                        <th>Telefonszám</th>
+                    </tr>
+                </thead>
+                <tbody id="schedule-body"></tbody>
+            </table>
+        </section>
+
+        <p id="error-message" class="error-message"></p>
+    </main>
+</body>
+
+</html>

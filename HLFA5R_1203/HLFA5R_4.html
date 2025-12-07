@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>Webtechnológiák 1 – Egyszerű számolás (jQuery)</title>
+    <link rel="stylesheet" href="HLFA5R_style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script defer src="HLFA5R_4.js"></script>
+</head>
+
+<body>
+    <header class="page-header">
+        <h1>Webtechnológiák 1 – egyszerű számolás</h1>
+        <p>Baba Levente – Neptun: HLFA5R</p>
+    </header>
+
+    <main>
+        <h2>Négy alapművelet egész számokkal</h2>
+
+        <form id="calc-form">
+            <div>
+                <label for="operand1">Első szám:</label>
+                <input type="text" id="operand1" name="operand1">
+            </div>
+
+            <div>
+                <label for="operand2">Második szám:</label>
+                <input type="text" id="operand2" name="operand2">
+            </div>
+
+            <fieldset>
+                <legend>Művelet</legend>
+
+                <label>
+                    <input type="radio" name="operation" value="add">
+                    Összeadás (+)
+                </label>
+
+                <label>
+                    <input type="radio" name="operation" value="sub">
+                    Kivonás (−)
+                </label>
+
+                <label>
+                    <input type="radio" name="operation" value="mul">
+                    Szorzás (×)
+                </label>
+
+                <label>
+                    <input type="radio" name="operation" value="div">
+                    Osztás (÷)
+                </label>
+            </fieldset>
+
+            <div>
+                <button type="submit" id="calc-button">Számol</button>
+                <button type="button" id="clear-button">Törlés</button>
+            </div>
+
+            <div>
+                <label for="result">Eredmény:</label>
+                <input type="text" id="result" name="result" readonly>
+            </div>
+        </form>
+
+        <p id="error-message" class="error-message"></p>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+{
+    "hallgato": {
+        "nev": "Baba Levente",
+        "neptun": "HLFA5R"
+    },
+    "orarend": [{
+            "kurzus": "Szoftvertesztelés",
+            "nap": "Hétfő",
+            "idopont": "8:00–9:00",
+            "cim": "Miskolci Egyetem, 3515 Miskolc-Egyetemváros, A/2 Fsz.",
+            "telefonszam": "+36 46 565 111"
+        },
+        {
+            "kurzus": "Webtechnológiák 1.",
+            "nap": "Hétfő",
+            "idopont": "10:00–11:00",
+            "cim": "Miskolci Egyetem, 3515 Miskolc-Egyetemváros, A1/MFsz. 5. Ea.",
+            "telefonszam": "+36 46 565 111"
+        },
+        {
+            "kurzus": "Angol szaknyelv",
+            "nap": "Hétfő",
+            "idopont": "12:00–13:00",
+            "cim": "Miskolci Egyetem, 3515 Miskolc-Egyetemváros, A1/223",
+            "telefonszam": "+36 46 565 111"
+        },
+        {
+            "kurzus": "Mesterséges intelligencia alapok",
+            "nap": "Kedd",
+            "idopont": "10:00–11:00",
+            "cim": "Miskolci Egyetem, 3515 Miskolc-Egyetemváros, A1/MFsz. 32. Ea.",
+            "telefonszam": "+36 46 565 111"
+        },
+        {
+            "kurzus": "Algoritmusok és vizsgálatuk",
+            "nap": "Kedd",
+            "idopont": "14:00–15:00",
+            "cim": "Miskolci Egyetem, 3515 Miskolc-Egyetemváros, A1/305-6. 30. Ea.",
+            "telefonszam": "+36 46 565 111"
+        },
+        {
+            "kurzus": "Webtechnológiák 1.",
+            "nap": "Szerda",
+            "idopont": "12:00–13:00",
+            "cim": "Miskolci Egyetem, 3515 Miskolc-Egyetemváros, Inf. 101",
+            "telefonszam": "+36 46 565 111"
+        },
+        {
+            "kurzus": "Szoftvertesztelés",
+            "nap": "Csütörtök",
+            "idopont": "10:00–11:00",
+            "cim": "Miskolci Egyetem, 3515 Miskolc-Egyetemváros, Inf. 103",
+            "telefonszam": "+36 46 565 111"
+        },
+        {
+            "kurzus": "Vállalati rendszerek fejlesztése",
+            "nap": "Csütörtök",
+            "idopont": "14:00–15:00",
+            "cim": "Miskolci Egyetem, 3515 Miskolc-Egyetemváros, Inf. 103",
+            "telefonszam": "+36 46 565 111"
+        },
+        {
+            "kurzus": "Vállalati rendszerek fejlesztése",
+            "nap": "Csütörtök",
+            "idopont": "17:00–18:00",
+            "cim": "Miskolci Egyetem, 3515 Miskolc-Egyetemváros, Inf. 103",
+            "telefonszam": "+36 46 565 111"
+        }
+    ]
+}
