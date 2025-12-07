@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NEPTUNKOD – Videó vezérlés (ikonokkal)</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <style>
+    * { box-sizing: border-box; }
+    :root { --w: 40rem; --gap: 1rem; }
+    body { margin: 0; font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif; background: #fafafa; color: #111; }
+    header, footer { padding: 1rem 1.25rem; background: #f0f0f0; }
+    header h1 { margin: 0; font-size: 1.15rem; }
+
+    main { display: grid; place-items: start center; padding: 1.25rem; }
+    .video-wrap { width: var(--w); max-width: 100%; }
+    video { width: 100%; height: auto; background: #000; border-radius: 0.5rem; }
+
+    .grid { margin-top: 2rem; display: grid; grid-template-columns: 1fr 2.5fr; grid-template-rows: repeat(4, auto); gap: var(--gap); width: var(--w); max-width: 100%; }
+    .label { place-self: center end; font-weight: 600; }
+    .row { display: flex; flex-direction: row; gap: 1rem; flex-wrap: wrap; }
+
+    button { width: 2.5rem; height: 2.5rem; line-height: 4; overflow: hidden; border: none; border-radius: 0.5rem; background-color: #bdf; box-shadow: 0 0 0.125rem #000000bb, inset 0 0 0.25rem 0 #ffffffbb; cursor: pointer; }
+    button:hover { background-color: #9cf; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+
+    footer { border-top: 4px solid gray; padding-top: 2rem; margin-top: 2rem; width: calc(var(--w) - 2.5rem); max-width: calc(100% - 2.5rem); text-align: right; }
+    footer a { color: inherit; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Videó vezérlése – ikon gombokkal</h1>
+  </header>
+
+  <main>
+    <div class="video-wrap">
+      <video id="video" src="neptunkod_video.mp4" preload="metadata"></video>
+    </div>
+
+    <section class="grid">
+      <div class="label">Vezérlés</div>
+      <div class="row">
+        <button id="start" title="Indít" aria-label="Indít">
+          <span class="material-symbols-outlined">play_arrow</span>
+        </button>
+        <button id="stop" title="Leállít" aria-label="Leállít">
+          <span class="material-symbols-outlined">stop</span>
+        </button>
+        <button id="toggle" title="Indít/Leállít" aria-label="Indít/Leállít">
+          <span class="material-symbols-outlined">play_pause</span>
+        </button>
+      </div>
+
+      <div class="label">Hangerő</div>
+      <div class="row">
+        <button id="mute" title="Néma" aria-label="Néma">
+          <span class="material-symbols-outlined">volume_off</span>
+        </button>
+        <button id="low" title="Halk" aria-label="Halk">
+          <span class="material-symbols-outlined">volume_down</span>
+        </button>
+        <button id="high" title="Hangos" aria-label="Hangos">
+          <span class="material-symbols-outlined">volume_up</span>
+        </button>
+      </div>
+
+      <div class="label">Sebesség</div>
+      <div class="row">
+        <button data-speed="0.25" title="0.25×" aria-label="0.25×">
+          <span class="material-symbols-outlined">slow_motion_video</span>
+        </button>
+        <button data-speed="0.5" title="0.5×" aria-label="0.5×">
+          <span class="material-symbols-outlined">slow_motion_video</span>
+        </button>
+        <button data-speed="1" title="1× (normál)" aria-label="1× (normál)">
+          <span class="material-symbols-outlined">speed</span>
+        </button>
+        <button data-speed="1.5" title="1.5×" aria-label="1.5×">
+          <span class="material-symbols-outlined">fast_forward</span>
+        </button>
+        <button data-speed="2" title="2×" aria-label="2×">
+          <span class="material-symbols-outlined">keyboard_double_arrow_right</span>
+        </button>
+      </div>
+
+      <div class="label">Egyéb</div>
+      <div class="row">
+        <button id="ended" title="Befejeződött-e" aria-label="Befejeződött-e">
+          <span class="material-symbols-outlined">task_alt</span>
+        </button>
+        <button id="duration" title="Hossz (mp)" aria-label="Hossz (mp)">
+          <span class="material-symbols-outlined">hourglass_empty</span>
+        </button>
+        <button id="position" title="Pozíció (mp)" aria-label="Pozíció (mp)">
+          <span class="material-symbols-outlined">schedule</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Forrás: <a id="srcLink" href="#" target="_blank" rel="noopener">neptunkod_video.mp4</a></small>
+  </footer>
+
+  <script>
+    const v = document.getElementById('video');
+
+    document.getElementById('start').addEventListener('click', () => v.play());
+    document.getElementById('stop').addEventListener('click', () => { v.pause(); v.currentTime = 0; });
+    document.getElementById('toggle').addEventListener('click', () => { v.paused ? v.play() : v.pause(); });
+
+    document.getElementById('mute').addEventListener('click', () => { v.muted = false; v.volume = 0; });
+    document.getElementById('low').addEventListener('click', () => { v.muted = false; v.volume = 0.3; });
+    document.getElementById('high').addEventListener('click', () => { v.muted = false; v.volume = 1; });
+
+    document.querySelectorAll('button[data-speed]').forEach(b =>
+      b.addEventListener('click', () => { v.playbackRate = parseFloat(b.dataset.speed); })
+    );
+
+    document.getElementById('ended').addEventListener('click', () => alert(v.ended ? 'Igen' : 'Nem'));
+    document.getElementById('duration').addEventListener('click', () => {
+      const d = v.duration;
+      alert(Number.isFinite(d) ? String(Math.round(d)) : 'Ismeretlen');
+    });
+    document.getElementById('position').addEventListener('click', () => alert(String(Math.round(v.currentTime))));
+
+    const src = v.getAttribute('src') || (v.querySelector('source')?.getAttribute('src') ?? '');
+    const link = document.getElementById('srcLink');
+    if (src) { link.textContent = src; link.href = src; }
+  </script>
+</body>
+</html>

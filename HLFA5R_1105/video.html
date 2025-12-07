@@ -1,0 +1,114 @@
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NEPTUNKOD – Videó vezérlés</title>
+  <style>
+    :root { --gap: 1rem; --w: 40rem; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif; color: #111; background: #fafafa; }
+
+    header, footer { padding: 1rem 1.25rem; background: #f0f0f0; }
+    header h1 { margin: 0; font-size: 1.25rem; }
+
+    main { display: grid; place-items: start center; gap: var(--gap); padding: 1.25rem; }
+    .video-wrap { width: var(--w); max-width: 100%; }
+    video { width: 100%; height: auto; background: #000; border-radius: 0.5rem; }
+
+    section { width: var(--w); max-width: 100%; }
+    .controls { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; }
+    .group { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+    .group h3 { margin: 0.5rem 0; font-size: 0.95rem; margin-right: 0.25rem; }
+
+    button {
+      padding: 0.5rem 0.75rem;
+      border: none;
+      border-radius: 0.5rem;
+      background-color: #bdf;
+      box-shadow: 0 0 0.125rem #0008, inset 0 0 0.25rem 0 #fff8;
+      cursor: pointer;
+    }
+    button:hover { background-color: #9cf; }
+
+    footer { border-top: 4px solid gray; text-align: right; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Videó vezérlése</h1>
+  </header>
+
+  <main>
+    <div class="video-wrap">
+      <video id="video" src="neptunkod_video.mp4" preload="metadata"></video>
+    </div>
+
+    <section>
+      <div class="controls">
+        <div class="group">
+          <h3>Vezérlés</h3>
+          <button id="start">Indít</button>
+          <button id="stop">Leállít</button>
+          <button id="toggle">Indít / Leállít</button>
+        </div>
+
+        <div class="group">
+          <h3>Hangerő</h3>
+          <button id="mute">Néma</button>
+          <button id="low">Halk</button>
+          <button id="high">Hangos</button>
+        </div>
+
+        <div class="group">
+          <h3>Sebesség</h3>
+          <button data-speed="0.25">Nagyon lassú</button>
+          <button data-speed="0.5">Lassú</button>
+          <button data-speed="1">Normál</button>
+          <button data-speed="1.5">Gyorsabb</button>
+          <button data-speed="2">Nagyon gyors</button>
+        </div>
+
+        <div class="group">
+          <h3>Egyéb</h3>
+          <button id="ended">Befejeződött-e</button>
+          <button id="duration">Hossz (mp)</button>
+          <button id="position">Pozíció (mp)</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>NEPTUNKOD_1105</small>
+  </footer>
+
+  <script>
+    const v = document.getElementById('video');
+
+    document.getElementById('start').addEventListener('click', () => v.play());
+    document.getElementById('stop').addEventListener('click', () => { v.pause(); v.currentTime = 0; });
+    document.getElementById('toggle').addEventListener('click', () => { v.paused ? v.play() : v.pause(); });
+
+    document.getElementById('mute').addEventListener('click', () => { v.muted = false; v.volume = 0; });
+    document.getElementById('low').addEventListener('click', () => { v.muted = false; v.volume = 0.3; });
+    document.getElementById('high').addEventListener('click', () => { v.muted = false; v.volume = 1; });
+
+    document.querySelectorAll('button[data-speed]').forEach(b =>
+      b.addEventListener('click', () => { v.playbackRate = parseFloat(b.dataset.speed); })
+    );
+
+    document.getElementById('ended').addEventListener('click', () => {
+      alert(v.ended ? 'Igen' : 'Nem');
+    });
+
+    document.getElementById('duration').addEventListener('click', () => {
+      const d = v.duration;
+      alert(Number.isFinite(d) ? String(Math.round(d)) : 'Ismeretlen');
+    });
+
+    document.getElementById('position').addEventListener('click', () => {
+      alert(String(Math.round(v.currentTime)));
+    });
+  </script>
+</body>
+</html>

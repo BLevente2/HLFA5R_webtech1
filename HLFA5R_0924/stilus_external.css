@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffdf0;
+    margin: 20px;
+    color: #222222;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    color: #004c99;
+    margin-bottom: 10px;
+}
+
+.student {
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+main p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.justify {
+    text-align: justify;
+    margin-bottom: 16px;
+}
+
+.left {
+    text-align: left;
+    color: #660000;
+}
+
+.center {
+    text-align: center;
+    color: #006600;
+}
+
+.right {
+    text-align: right;
+    color: #990099;
+}
